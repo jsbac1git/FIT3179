@@ -1,0 +1,119 @@
+Breed,height_low_inches,height_high_inches,weight_low_lbs,weight_high_lbs,Country
+Anatolian Sheepdog,27,29,100,150,Turkey
+Bernese Mountain Dog,23,27,85,110,Switzerland
+Bloodhound,24,26,80,120,France
+Borzoi,26,28,70,100,Russia
+Bullmastiff,25,27,100,130,England
+Great Dane,32,32,120,160,Germany
+Great Pyrenees,27,32,95,120,France
+Great Swiss Mountain Dog,23,28,130,150,Switzerland
+Irish Wolfhound,28,35,90,150,Ireland
+Kuvasz,28,30,70,120,Hungary
+Mastiff,27,30,175,190,England
+Neopolitan Mastiff,24,30,100,150,Italy
+Otter Hound,24,26,65,110,England
+Rottweiler,22,27,90,110,Germany
+Saint Bernard,25,28,110,190,Switzerland
+Beauceron,24,27,100,120,France
+Belgian Malinois,22,26,60,65,Belgium
+Belgian Sheepdog,22,26,60,75,Belgium
+Belgian Tervuren,22,26,60,75,Belgium
+Black Russian Terrier,25,29,80,140,Russia
+Bouvier Des Flandres,23,27,75,95,Belgium
+Boxer,21,25,65,70,Germany
+Briard,23,27,74,76,France
+Clumber Spaniel,19,20,35,65,England
+Collie (Rough) & (Smooth),22,26,50,75,Scotland
+Curly Coated Retriever,25,27,65,80,England
+Doberman Pinscher,26,28,60,100,Germany
+English Foxhound,22,25,65,70,England
+English Setter,23,27,45,80,England
+German Shepherd Dog,22,26,75,90,Germany
+German Shorthaired Pointer,20,27,50,80,Germany
+German Wirehaired Pointer,22,26,60,70,Germany
+Giant Schnauzer,25,28,70,75,Germany
+Golden Retriever,21,24,55,75,Scotland
+Gordon Setter,23,27,45,80,Scotland
+Greyhound,27,30,60,70,England
+Irish Setter,25,27,60,70,Ireland
+Komondor,26.5,35.5,80,135,Hungary
+Old English Sheepdog (Bobtail),20,24,60,65,England
+Poodle Standard,15,25,45,45,France
+Scottish Deerhound,28,32,75,110,Scotland
+Spinone Italiano,23,28,65,80,Italy
+Weimaraner,25,27,70,85,Germany
+Airdale Terrier,22,24,45,45,England
+Australian Cattle Dog,17,20,35,45,Australia
+Basset Hound,14,14,40,50,France
+Bearded Collie,20,22,40,60,Scotland
+Border Collie,19,21,40,40,England
+Brittany,17,21,30,40,France
+Bull Dog,12,16,50,60,England
+Bull Terrier,21,22,50,70,England
+Canaan Dog,19,24,35,55,Israel
+Chinese Shar Pei,18,20,45,55,China
+Chow Chow,19,22,45,55,China
+Cocker Spaniel-English,15,17,25,35,England
+Dalmatian,19,23,45,70,Croatia
+English Springer Spaniel,20,20,45,55,England
+Field Spaniel,18,18,35,50,England
+Flat Coated Retriever,22,23,60,70,England
+Finnish Spitz,15,20,31,35,Finland
+Harrier,19,21,40,60,England
+Ibizan Hound,22,29,42,55,Ibiza
+Irish Terrier,18,19,25,27,Ireland
+Irish Water Spaniel,10,23,45,65,Ireland
+Keeshond,17,19,35,50,Netherlands
+Kerry Blue Terrier,17,21,30,45,Ireland
+Norwegian Elkhound,19,20,40,60,Norway
+Nova Scotia Duck Tolling Retriever,17,21,35,50,Canada
+Petit Basset Griffon Vendeen,13,15,30,40,France
+Pharaoh Hound,21,25,45,55,Malta
+Pointer,21,24,44,66,England
+Polish Lowland Sheepdog,16,20,30,35,Poland
+Portuguese Water Dog,20,23,42,60,Portugal
+Saluki,23,28,35,70,Syria
+Samoyed,19,24,50,65,Russia
+Siberian Husky,20,23,40,60,Russia
+Soft-Coated Wheaten Terrier,18,20,35,45,Ireland
+Staffordshire Bull Terrier,14,16,24,28,England
+Standard Schnauzer,17,19,33,33,Germany
+Sussex Spaniel,15,16,40,45,England
+Vizsla,48,66,22,25,Hungary
+Welsh Springer Spaniel,16,19,35,45,Wales
+Wirehaired Pointing Griffon,20,24,45,60,France
+American Eskimo,9,19,25,30,Germany
+Beagle,13,16,18,30,England
+Bedlington Terrier,15,16,18,23,England
+Border Terrier,12,15,12,15,England
+Brussels Griffon,7,8,6,12,Belgium
+Cairn Terrier,9,10,14,14,Scotland
+Cardigan Welsh Corgi,10,12,25,35,Wales
+Cavalier King Charles Spaniel,10,15,15,20,England
+Dachshund,7,10,16,32,Germany
+Dandie Dinmont Terrier,18,24,8,11,Scotland
+English Toy Spaniel,10,10,9,15,England
+Fox Terrier â€“ Smooth,13,16,15,20,England
+Fox Terrier â€“ Wirehair,13,16,15,20,England
+French Bulldog,11,12,17,28,France
+German Pinscher,16,19,25,35,Germany
+Glen Imaal Terrier,14,14,34,36,Ireland
+Lakeland Terrier,13,14,15,17,England
+Manchester Terrier (Standard),15,16,17,18,England
+Poodle Miniature,10,15,20,20,France
+Puli,16,17,29,33,Hungary
+Schipperke,10,13,12,18,Belgium
+Scottish Terrier,10,12,18,22,Scotland
+Sealyham Terrier,12,12,18,20,Wales
+Shetland Sheepdog (Sheltie),13,16,14,20,Scotland
+Skye Terrier,10,10,25,25,Scotland
+Welsh Terrier,15,15,20,21,Wales
+West Highland White Terrier,11,11,13,15,Scotland
+Whippet,18,22,27,30,England
+Affenpinscher,9,12,8,12,Germany
+Italian Greyhound,12,15,6,10,Italy
+Maltese,8,10,4,6,Greece
+Papillon,8,11,5,10,France
+Pomeranian,12,12,3,7,Germany
+Poodle Toy,10,10,10,10,France
+Yorkshire Terrier,8,8,3,7,England
