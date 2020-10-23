@@ -2,6 +2,6 @@
 
 Sample webpage [here](https://jsbac1git.github.io/FIT3179/).
 
-Week 9: [here](http://jsbac1git.github.io/FIT3179/Week9/).
+[Week 9:](http://jsbac1git.github.io/FIT3179/Week9/).
 
-Week 10: [here](http://jsbac1git.github.io/FIT3179/Week10/).
+[Week 10:](http://jsbac1git.github.io/FIT3179/Week10/).
