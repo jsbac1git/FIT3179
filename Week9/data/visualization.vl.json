@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Average size of Dog Breeds from each Country",
+  "width": 1000,
+  "height": 625,
+  "projection": {"type": "equirectangular"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/jsbac1git/FIT3179/main/Week9/data/Europe.geo.topojson",
+    "format": {"type": "topojson", "feature": "Europe"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://github.com/jsbac1git/FIT3179/blob/main/Week9/data/breed_info.csv"
+        },
+        "key": "Country",
+        "fields": ["height_low_inches", "height_high_inches"]
+      }
+    },
+    {
+      "calculate": "(datum.height_low_inches + datum.height_high_inches) / 2",
+      "as": "Average Size (inches)"
+    }
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Average Size (inches)",
+      "type": "quantitative",
+      "scale": {"scheme": "greens"}
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "Average Size (inches)", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}
