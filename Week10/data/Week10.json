@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 2000,
+  "title": "Total Dog sales from years 2011, 2013 & 2015",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jsbac1git/FIT3179/main/Week10/data/dog_sales.csv"
+  },
+  "params": [
+    {
+      "name": "Sales_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 17200,
+        "step": 100,
+        "name": "Number of Sales:"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Total > 0"},
+    {"filter": "datum.Total > Sales_Above"}
+  ],
+  "encoding": {
+    "y": {"field": "Primary Breed", "type": "nominal", "title": "Breed"},
+    "x": {
+      "aggregate": "sum",
+      "field": "Total",
+      "type": "quantitative",
+      "axis": {"tickCount": 10},
+      "scale": {"type": "linear", "domain": [1, 18000]}
+    }
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "tooltip": [
+          {"field": "Primary Breed", "type": "nominal"},
+          {"field": "Num2011", "type": "quantitative", "format": ","},
+          {"field": "Num2013", "type": "quantitative", "format": ","},
+          {"field": "Num2015", "type": "quantitative", "format": ","},
+          {"field": "Total", "type": "quantitative", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 40,
+        "fontSize": 12,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Total", "type": "quantitative"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Primary Breed'] == 'GERMAN SHEPARD' || datum['Primary Breed'] == 'LABRADOR RETREV' || datum['Primary Breed'] == 'BORDER COLLIE' || datum['Primary Breed'] == 'PUG' || datum['Primary Breed'] == 'ENG SPRNGR SPAN' || datum['Primary Breed'] == 'SHIBA INU' || datum['Primary Breed'] == 'SIBERIAN HUSKY'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Primary Breed", "type": "nominal"},
+          {"field": "Num2011", "type": "quantitative", "format": ","},
+          {"field": "Num2013", "type": "quantitative", "format": ","},
+          {"field": "Num2015", "type": "quantitative", "format": ","},
+          {"field": "Total", "type": "quantitative", "format": ","}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
