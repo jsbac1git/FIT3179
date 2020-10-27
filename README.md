@@ -1,7 +1,9 @@
 ## Welcome to GitHub Pages
 
-Sample webpage [here](https://jsbac1git.github.io/FIT3179/).
+The link to assignment page is [here](https://jsbac1git.github.io/FIT3179/Assignment/).
 
-[Week 9:](http://jsbac1git.github.io/FIT3179/Week9/).
+Sample webpage [here](https://jsbac1git.github.io/FIT3179/)
 
-[Week 10:](http://jsbac1git.github.io/FIT3179/Week10/).
+[Week 9:](http://jsbac1git.github.io/FIT3179/Week9/)
+
+[Week 10:](http://jsbac1git.github.io/FIT3179/Week10/)
