@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 2000,
+  "title": "Dog Size Average by Country",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jsbac1git/FIT3179/main/Assignment/data/breed_info_final.csv"
+  },
+  "transform": [
+    {"filter": "datum.Height_Average_Inches >= 0"},
+    {"filter": "datum.Weight_Average_Ibs >= 0"}
+  ],
+  "encoding": {
+    "y": {"field": "Origin Country", "type": "nominal", "title": "Country"},
+    "x": {
+      "field": "Height_Average_Inches",
+      "type": "quantitative",
+      "title": "Average Height (inches)",
+      "axis": {"tickCount": 10},
+      "scale": {"type": "linear", "domain": [1, 40]}
+    }
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "tooltip": [
+          {"field": "Origin Country", "type": "nominal"},
+          {
+            "field": "Height_Average_Inches",
+            "type": "quantitative",
+            "format": ","
+          },
+          {"field": "Weight_Average_Ibs", "type": "quantitative", "format": ","}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
