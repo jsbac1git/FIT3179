@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Average size of Dog Breeds from each Country",
+  "width": 800,
+  "height": 600,
+  "projection": {"type": "equirectangular"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/jsbac1git/FIT3179/main/Assignment/js/World.geo.topojson",
+    "format": {"type": "topojson", "feature": "World"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.sovereignt",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jsbac1git/FIT3179/main/Assignment/data/breed_info_country_final.csv"
+        },
+        "key": "Origin Country",
+        "fields": ["Breed_Height_Average_Inches", "Breed_Weight_Average_Ibs"]
+      }
+    },
+    {"filter": "datum.Breed_Height_Average_Inches >= 0"},
+    {"filter": "datum.Breed_Weight_Average_Ibs >= 0"}
+  ],
+  "layer": [
+    {"mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}},
+    {
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "color": {
+          "field": "Breed_Height_Average_Inches",
+          "type": "quantitative",
+          "title": "Breed Height Average (inches)",
+          "scale": {"scheme": "blues"}
+        },
+        "tooltip": [
+          {
+            "field": "properties.sovereignt",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "Breed_Height_Average_Inches",
+            "type": "quantitative",
+            "title": "Breed Height Average (inches)"
+          },
+          {
+            "field": "Breed_Weight_Average_Ibs",
+            "type": "quantitative",
+            "title": "Breed Weight Average (lbs)"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
