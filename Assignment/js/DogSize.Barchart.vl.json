@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 600,
+  "height": 600,
+  "title": "Top 20 Dog Size Averages by Country",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jsbac1git/FIT3179/main/Assignment/data/breed_info_country_final.csv"
+  },
+  "transform": [
+    {"filter": "datum.Breed_Height_Average_Inches >= 0"},
+    {"filter": "datum.Breed_Weight_Average_Ibs >= 0"},
+    {"filter": "datum.Rank_Height <= 20"}
+  ],
+  "encoding": {
+    "y": {
+      "field": "Origin Country",
+      "type": "nominal",
+      "title": "Country",
+      "sort": {"encoding": "x", "order": "descending"}
+    },
+    "x": {
+      "field": "Breed_Height_Average_Inches",
+      "type": "quantitative",
+      "title": "Average Height (inches)",
+      "axis": {"tickCount": 10},
+      "scale": {"type": "linear", "domain": [1, 40]}
+    },
+    "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": {
+        "domain": ["North America", "Europe", "Africa", "Asia", "Oceania"],
+        "range": ["#fcba03", "#1f31a6", "#bf0f1b", "#178717", "#721787"]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "tooltip": [
+          {"field": "Origin Country", "type": "nominal"},
+          {
+            "field": "Breed_Height_Average_Inches",
+            "type": "quantitative",
+            "title": "Height Average (inches)",
+            "format": ","
+          },
+          {
+            "field": "Breed_Weight_Average_Ibs",
+            "type": "quantitative",
+            "title": "Weight Average (lbs)",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

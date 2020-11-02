@@ -1,0 +1,130 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 600,
+  "title": "Height Vs. Weight",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jsbac1git/FIT3179/main/Assignment/data/breed_info_country_final.csv"
+  },
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Breed_Height_Average_Inches >= 0"},
+    {"filter": "datum.Breed_Weight_Average_Ibs >= 0"},
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Breed_Height_Average_Inches",
+      "type": "quantitative",
+      "title": "Average Height (inches)",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "linear", "domain": [1, 40]}
+    },
+    "y": {
+      "field": "Breed_Weight_Average_Ibs",
+      "type": "quantitative",
+      "title": "Average Weight (lbs)",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "linear", "domain": [1, 150]}
+    }
+  },
+  "layer": [
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Continent"],
+          "bind": "legend"
+        }
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Breed_Weight_Average_Ibs",
+          "type": "quantitative",
+          "title": "Average Weight (lbs)",
+          "scale": {
+            "type": "threshold",
+            "domain": [25, 50, 75, 100],
+            "range": [5, 25, 100, 300, 600]
+          }
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": ["North America", "Europe", "Africa", "Asia", "Oceania"],
+            "range": ["#fcba03", "#1f31a6", "#bf0f1b", "#178717", "#721787"]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.5},
+          "value": 0.1
+        },
+        "tooltip": [
+          {"field": "Origin Country", "type": "nominal"},
+          {
+            "field": "Breed_Height_Average_Inches",
+            "type": "quantitative",
+            "title": "Average Height (inches)",
+            "format": ","
+          },
+          {
+            "field": "Breed_Weight_Average_Ibs",
+            "type": "quantitative",
+            "title": "Average Weight (lbs)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Origin Country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Origin Country'] == 'Australia' || datum['Origin Country'] == 'Switzerland' || datum['Origin Country'] == 'Hungary' || datum['Origin Country'] == 'Turkey' || datum['Origin Country'] == 'Greece' || datum['Origin Country'] == 'United Kingdom'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ],
+  "config": {}
+}
