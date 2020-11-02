@@ -21,11 +21,11 @@
       font-weight: 900;
     }
      body{
-       background-color: lightgray;
+       background-color: blue;
      }
      .page{
        width: 1050px;    
-       background-color: blue;   
+       background-color: white;   
        margin: auto;
        padding: 50px;
        padding-top: 35px;
@@ -63,10 +63,10 @@
 <div id="bar_chart"></div>
 
 <h2>Scatterplot Graph of Dog Size Vs. Weight</h2>
-<div id="scatterplot"></div>  
+<div id="scatter_plot"></div>  
 
 <h2>Scatterplot Graph of Dog Size Vs. Intelligence</h2>
-<div id="scatterplot"></div>  
+<div id="scatter_plot"></div>  
   
 <script type="text/javascript">
   
@@ -84,7 +84,7 @@
   
   var vis3 = "js/Height_Vs_Weight.vl.json";
   
-  vegaEmbed('#scatterplot', vis3).then(function(result) {
+  vegaEmbed('#scatter_plot', vis3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
