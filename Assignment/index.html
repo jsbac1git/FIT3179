@@ -25,7 +25,7 @@
      }
      .page{
        width: 1050px;    
-       background-color: white;   
+       background-color: blue;   
        margin: auto;
        padding: 50px;
        padding-top: 35px;
@@ -62,6 +62,12 @@
 <h2>Bar Graph of Dog Size</h2>
 <div id="bar_chart"></div>
 
+<h2>Scatterplot Graph of Dog Size Vs. Weight</h2>
+<div id="scatterplot"></div>  
+
+<h2>Scatterplot Graph of Dog Size Vs. Intelligence</h2>
+<div id="scatterplot"></div>  
+  
 <script type="text/javascript">
   
   var vis1 = "https://raw.githubusercontent.com/jsbac1git/FIT3179/main/Assignment/js/DogSizeChoropleth.vl.json";
@@ -71,6 +77,18 @@
   }).catch(console.error);
   
   var vis2 = "js/DogSizeBarChart.vl.json";
+  
+  vegaEmbed('#bar_chart', vis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var vis3 = "js/Height_Vs_Weight.vl.json";
+  
+  vegaEmbed('#bar_chart', vis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var vis4 = "js/Height_Vs_Intelligence.vl.json";
   
   vegaEmbed('#bar_chart', vis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
